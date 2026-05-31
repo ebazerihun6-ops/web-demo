@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olyad Gadisa Law Office</title>
+    <!-- Linking our external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION HEADER -->
+    <header>
+        <nav>
+            <div class="logo">⚖️ Olyad Gadisa Law Office</div>
+            <ul>
+                <li><button id="btn-home" class="active-btn" onclick="navigateTo('home')">Home</button></li>
+                <li><button id="btn-contact" onclick="navigateTo('contact')">Contact Info</button></li>
+                <li><button id="btn-aimode" onclick="navigateTo('aimode')">AI Assistant Mode</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- PAGE VIEW 1: HOME -->
+    <section id="view-home" class="content-view active-view">
+        <div class="hero-banner">
+            <div class="hero-avatar">
+                <img src="photo1.jpg" alt="Olyad Gadisa Abdi Portrait">
+            </div>
+            <div class="hero-details">
+                <h1>Welcome to Our Legal Practice</h1>
+                <h2>Olyad Gadisa Abdi | Federal Court Attorney & Counselor at Law</h2>
+                <p>Welcome! We deliver top-tier, trustworthy legal representation and consultation. As a fully credentialed Federal Court Advocate, I am fiercely dedicated to protecting your strategic assets, managing critical enterprise exposure, and securing statutory justice across all national boundaries and legal frameworks.</p>
+                <button class="action-button" style="width: auto; padding: 10px 22px;" onclick="navigateTo('contact')">Get In Touch</button>
+            </div>
+        </div>
+
+        <h2 class="section-headline">Federal Court Legal Matters & Scope</h2>
+        <div class="services-layout">
+            <div class="service-card">
+                <h3>High-Level Corporate & Commercial Law</h3>
+                <p>Structuring nationwide enterprise agreements, managing cross-border commercial claims, and providing continuous litigation protection for diverse organizations at the national level.</p>
+            </div>
+            <div class="service-card">
+                <h3>Complex Real Estate & Property Disputes</h3>
+                <p>Resolving major asset, land tenure, structural ownership, and boundary litigation within the jurisdictional mandates of the Federal Courts.</p>
+            </div>
+            <div class="service-card">
+                <h3>Federal Criminal Defense & Appeals</h3>
+                <p>Providing strategic representation for administrative infractions, financial compliance reviews, and major complex litigation handling.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE VIEW 2: CONTACT INFO -->
+    <section id="view-contact" class="content-view">
+        <div class="contact-layout">
+            <div class="info-card">
+                <div>
+                    <h2>Office Contact Information</h2>
+                    <div class="meta-group">
+                        <label>📍 Physical Address</label>
+                        <p>6th floor office Number N656, Ahmed Bussines Center, Sao Thome & Principe Street, Lideta square, Addis Ababa, Ethiopia</p>
+                    </div>
+                    <div class="meta-group">
+                        <label>📞 Phone Number</label>
+                        <p>091 144 0601</p>
+                    </div>
+                    <div class="meta-group">
+                        <label>⏰ Working Hours</label>
+                        <p>Monday - Friday: 8:30 AM - 5:30 PM (Closed on Weekends)</p>
+                    </div>
+                </div>
+                <div>
+                    <label style="color:#c5a059; font-weight:600; font-size:13px; text-transform:uppercase;">Social Channels</label>
+                    <div class="social-matrix">
+                        <a href="https://facebook.com" class="social-anchor" target="_blank">Facebook</a>
+                        <a href="https://linkedin.com" class="social-anchor" target="_blank">LinkedIn</a>
+                        <a href="https://telegram.org" class="social-anchor" target="_blank">Telegram</a>
+                        <a href="https://x.com" class="social-anchor" target="_blank">X (Twitter)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-card">
+                <h2>Send a Direct Message</h2>
+                <form action="#" method="POST" onsubmit="alert('Message recorded securely.'); return false;">
+                    <div class="input-row">
+                        <label>Full Representative Name</label>
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-row">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="name@domain.com" required>
+                    </div>
+                    <div class="input-row">
+                        <label>Message Content</label>
+                        <textarea placeholder="Describe the legal case files or requirements..." style="height: 120px;" required></textarea>
+                    </div>
+                    <button type="submit" class="action-button">Transmit Message</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="map-wrapper">
+            <h3 style="margin-bottom: 12px; color: #111d28;">Geographic Office Map Location</h3>
+            <div class="map-display">
+                <img src="maps_screenshot.png" alt="Google Map Location Screenshot">
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE VIEW 3: AI ASSISTANT MODE -->
+    <section id="view-aimode" class="content-view">
+        <div style="text-align: center; margin-bottom: 25px;">
+            <h2 class="section-headline" style="margin-bottom: 8px;">Interactive Profile AI Mode</h2>
+            <p style="color: #666; font-size: 15px;">Ask our rule-based system automated questions concerning Lawyer Olyad's lineage, family, practice or law partners.</p>
+        </div>
+
+        <div class="ai-layout">
+            <div class="ai-topbar">
+                <h2>AI Lawyer Profile Assistant</h2>
+                <span class="ai-pulse">Active</span>
+            </div>
+            
+            <div class="ai-logs" id="chatContainer">
+                <div class="bubble ai-msg">
+                    Greetings! I am the automated identity profile helper for <strong>Lawyer Olyad Gadisa Abdi</strong>. Ask me anything regarding his birthplace, parents, wife, legal focus, or associates.
+                </div>
+            </div>
+
+            <div class="ai-pills">
+                <button class="pill-trigger" onclick="injectPill('Where was he born?')">Birthplace</button>
+                <button class="pill-trigger" onclick="injectPill('What is his father\'s name?')">Father</button>
+                <button class="pill-trigger" onclick="injectPill('Who is his mother?')">Mother</button>
+                <button class="pill-trigger" onclick="injectPill('Who is his wife?')">Wife Name</button>
+                <button class="pill-trigger" onclick="injectPill('Tell me about his professional work')">Practice Scope</button>
+                <button class="pill-trigger" onclick="injectPill('Who are his legal associates?')">Colleagues</button>
+            </div>
+
+            <div class="ai-control-row">
+                <input type="text" id="queryInput" placeholder="Ask a profile question..." onkeypress="catchReturn(event)">
+                <button class="action-button" style="width: auto; padding: 0 20px;" onclick="runAiCore()">Query AI</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER CREDIT LAYOUT -->
+    <footer>
+        <p>&copy; 2026 Lawyer Olyad Gadisa Law Office. All Rights Reserved.</p>
+        <p style="margin-top: 4px;">Website Engineered & Developed by <a href="#" class="credit" onclick="alert('Developer Profile: Eba Zerihun'); return false;">Eba Zerihun</a></p>
+    </footer>
+
+    <!-- Linking our external JavaScript file at the bottom for clean rendering -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+/* Base Configuration Elements */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+body { background-color: #f4f6f8; color: #2c3e50; line-height: 1.6; }
+
+/* Master Header and Navigation Bar */
+header { background-color: #111d28; color: white; position: sticky; top: 0; z-index: 1000; border-bottom: 3px solid #c5a059; }
+nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; padding: 15px 20px; }
+nav .logo { font-size: 22px; font-weight: bold; color: #c5a059; letter-spacing: 0.5px; }
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 20px; }
+nav ul li button { background: none; border: none; color: #f8f9fa; font-weight: 600; font-size: 16px; cursor: pointer; padding: 8px 12px; transition: 0.2s ease-in-out; border-radius: 4px; }
+nav ul li button:hover, nav ul li button.active-btn { color: #111d28; background-color: #c5a059; }
+
+/* Core View Content Block wrappers */
+.content-view { display: none; padding: 50px 20px; max-width: 1200px; margin: auto; min-height: 75vh; }
+.content-view.active-view { display: block !important; }
+
+/* 1. HOME VIEW STYLING */
+.hero-banner { display: flex; align-items: center; gap: 40px; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); margin-bottom: 40px; flex-wrap: wrap; }
+.hero-avatar { flex: 1; min-width: 280px; text-align: center; }
+.hero-avatar img { width: 100%; max-width: 300px; border-radius: 8px; border: 4px solid #c5a059; box-shadow: 0 4px 12px rgba(0,0,0,0.15); object-fit: cover; }
+.hero-details { flex: 2; min-width: 300px; }
+.hero-details h1 { font-size: 36px; color: #111d28; margin-bottom: 12px; }
+.hero-details h2 { font-size: 19px; color: #c5a059; font-weight: 500; margin-bottom: 20px; }
+.hero-details p { font-size: 16px; color: #555; margin-bottom: 25px; text-align: justify; }
+
+.section-headline { font-size: 26px; color: #111d28; text-align: center; margin-bottom: 30px; }
+.section-headline::after { content: ''; display: block; width: 50px; height: 3px; background: #c5a059; margin: 8px auto 0; }
+.services-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+.service-card { background: white; padding: 25px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); border-left: 5px solid #111d28; }
+.service-card h3 { color: #111d28; margin-bottom: 10px; font-size: 18px; }
+
+/* 2. CONTACT VIEW STYLING */
+.contact-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; }
+.info-card { background: #111d28; color: white; padding: 35px; border-radius: 8px; display: flex; flex-direction: column; justify-content: space-between; }
+.info-card h2 { color: #c5a059; margin-bottom: 20px; font-size: 24px; }
+.meta-group { margin-bottom: 18px; }
+.meta-group label { color: #c5a059; font-weight: 600; display: block; margin-bottom: 4px; font-size: 14px; text-transform: uppercase; }
+.meta-group p { font-size: 15px; color: #eef1f4; }
+.social-matrix { margin-top: 25px; display: flex; gap: 10px; flex-wrap: wrap; }
+.social-anchor { background: #1d2e3d; color: white; padding: 8px 14px; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 13px; border: 1px solid #34495e; transition: 0.2s; }
+.social-anchor:hover { background: #c5a059; color: #111d28; }
+
+.form-card { background: white; padding: 35px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.form-card h2 { color: #111d28; margin-bottom: 20px; font-size: 24px; }
+.input-row { margin-bottom: 18px; }
+.input-row label { display: block; margin-bottom: 6px; font-weight: 600; font-size: 14px; color: #444; }
+.input-row input, .input-row textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 15px; }
+.action-button { background-color: #c5a059; color: #111d28; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; width: 100%; font-size: 16px; font-weight: bold; transition: 0.2s; }
+.action-button:hover { background-color: #111d28; color: white; }
+
+.map-wrapper { margin-top: 35px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.map-display { width: 100%; height: 380px; background-color: #eef1f4; border-radius: 4px; overflow: hidden; }
+.map-display img { width: 100%; height: 100%; object-fit: contain; }
+
+/* 3. AI ROBOT VIEW STYLING */
+.ai-layout { background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 750px; margin: 0 auto; display: flex; flex-direction: column; height: 500px; border: 1px solid #ddd; }
+.ai-topbar { background: #111d28; color: white; padding: 15px; border-top-left-radius: 8px; border-top-right-radius: 8px; display: flex; align-items: center; justify-content: space-between; }
+.ai-topbar h2 { font-size: 16px; color: #c5a059; }
+.ai-pulse { font-size: 12px; background: #27ae60; padding: 2px 8px; border-radius: 10px; font-weight: bold; color: white; }
+.ai-logs { flex: 1; padding: 20px; overflow-y: auto; background: #fafafa; display: flex; flex-direction: column; gap: 12px; }
+.bubble { max-width: 75%; padding: 10px 14px; border-radius: 8px; font-size: 14.5px; margin-bottom: 5px; }
+.bubble.ai-msg { background: #eaedf1; color: #333; align-self: flex-start; border-bottom-left-radius: 1px; }
+.bubble.user-msg { background: #111d28; color: white; align-self: flex-end; border-bottom-right-radius: 1px; }
+.ai-pills { padding: 10px; background: #f1f3f5; display: flex; gap: 8px; flex-wrap: wrap; border-top: 1px solid #e2e6ea; }
+.pill-trigger { background: white; border: 1px solid #c5a059; color: #111d28; padding: 5px 12px; border-radius: 15px; cursor: pointer; font-size: 12px; font-weight: 500; }
+.pill-trigger:hover { background: #c5a059; color: white; }
+.ai-control-row { display: flex; padding: 12px; border-top: 1px solid #ddd; background: white; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; }
+.ai-control-row input { flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; margin-right: 8px; }
+
+footer { background-color: #111d28; color: #a0aab2; text-align: center; padding: 20px; margin-top: 50px; font-size: 13px; }
+footer .credit { color: #c5a059; font-weight: 600; text-decoration: none; }
